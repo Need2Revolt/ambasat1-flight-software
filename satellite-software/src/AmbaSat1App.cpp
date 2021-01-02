@@ -156,18 +156,19 @@ void AmbaSat1App::setup()
 
 void AmbaSat1App::loop() 
 {
+    
     PRINTLN_INFO(F("Transmitting Satellite Status."));
     sendSensorPayload(*this);
     _sleeping = false;
-
+    
     #ifdef ENABLE_LOGGER_SENSOR
         char message[255] = "Set your custom message here";
         _loggerSensor.setlogMessage(message);
         if (_loggerSensor.isActive()) {
-        PRINTLN_INFO(F("Transmitting logger sensor."));
-        sendSensorPayload(_loggerSensor);
-        _sleeping = false;
-    }
+            PRINTLN_INFO(F("Transmitting logger sensor."));
+            sendSensorPayload(_loggerSensor);
+            _sleeping = false;
+        }
     #endif
 
     if (_lsm9DS1Sensor.isActive()) {
@@ -175,12 +176,13 @@ void AmbaSat1App::loop()
         sendSensorPayload(_lsm9DS1Sensor);
         _sleeping = false;
     }
-
+    
     if (_missionSensor.isActive()) {
         PRINTLN_INFO(F("Transmitting mission sensor"));
         sendSensorPayload(_missionSensor);
         _sleeping = false;
     }
+    
     //
     // technically there is some risk that the satellite will loose power between
     // the first transmission above and the last one, and in such case we will not

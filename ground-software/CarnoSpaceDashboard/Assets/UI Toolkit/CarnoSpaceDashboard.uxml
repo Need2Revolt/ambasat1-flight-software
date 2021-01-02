@@ -1,0 +1,56 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="style.uss" />
+    <ui:VisualElement name="MainContainer" style="width: 100%; height: 100%; align-items: flex-start;">
+        <ui:VisualElement name="Title" style="width: 100%; height: 200px; background-image: url(&apos;/Assets/Textures/groundStationLogo.png&apos;); -unity-background-scale-mode: scale-to-fit; background-color: rgba(16, 30, 180, 0.77);" />
+        <ui:VisualElement name="Body" style="width: 100%; height: 75%; align-items: flex-start; flex-direction: row;">
+            <ui:VisualElement name="Telemetry" class="bodySlice">
+                <ui:Label text="Satellite telemetry" display-tooltip-when-elided="true" class="title" />
+                <ui:Label text="Last seen: " display-tooltip-when-elided="true" name="lastSeen" class="regular" />
+                <ui:Label text="Voltage:" display-tooltip-when-elided="true" name="voltage" class="regular" />
+                <ui:Label text="Boot count:" display-tooltip-when-elided="true" name="bootCount" class="regular" />
+                <ui:Label text="LSM9DS1 status:" display-tooltip-when-elided="true" name="lsm9ds1Status" class="regular" />
+                <ui:Label text="BME680 status:" display-tooltip-when-elided="true" name="bme680Status" class="regular" />
+                <ui:Label display-tooltip-when-elided="true" />
+                <ui:Label text="Ground telemetry" display-tooltip-when-elided="true" class="title" style="-unity-font-style: bold;" />
+                <ui:Label text="Gateway id:" display-tooltip-when-elided="true" name="lastGatewayId" class="regular" />
+                <ui:Label text="Latitude:" display-tooltip-when-elided="true" class="regular" />
+                <ui:Label text="Longitude:" display-tooltip-when-elided="true" class="regular" />
+                <ui:Label text="RSSI:" display-tooltip-when-elided="true" name="RSSI" class="regular" />
+                <ui:Label text="Channel:" display-tooltip-when-elided="true" class="regular" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Attitude" style="width: 33%; height: 100%;">
+                <ui:VisualElement class="bodySlice" style="width: 100%; height: 35%;">
+                    <ui:Label display-tooltip-when-elided="true" />
+                    <ui:Label text="Gyroscope" display-tooltip-when-elided="true" class="title" />
+                    <ui:Label text="X: Y: Z:" display-tooltip-when-elided="true" name="gyro" class="regular" />
+                    <ui:Label display-tooltip-when-elided="true" />
+                    <ui:Label text="Accelerometer" display-tooltip-when-elided="true" class="title" />
+                    <ui:Label text="X: Y: Z:" display-tooltip-when-elided="true" name="accelerometer" class="regular" />
+                    <ui:Label display-tooltip-when-elided="true" />
+                    <ui:Label text="Magnetometer" display-tooltip-when-elided="true" class="title" />
+                    <ui:Label text="X: Y: Z:" display-tooltip-when-elided="true" name="magnetometer" class="regular" />
+                    <ui:Label text="Attitude" display-tooltip-when-elided="true" class="title" />
+                </ui:VisualElement>
+                <ui:VisualElement style="justify-content: flex-end; height: 448px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Sensor" class="bodySlice" style="width: 33%; height: 100%;">
+                <ui:Label text="BME680 Sensor" display-tooltip-when-elided="true" class="title" />
+                <ui:Label display-tooltip-when-elided="true" />
+                <ui:Label text="Data" display-tooltip-when-elided="true" class="title" />
+                <ui:Label text="Temperature:" display-tooltip-when-elided="true" name="temperature" class="regular" />
+                <ui:Label text="Humidity:" display-tooltip-when-elided="true" name="humidity" class="regular" />
+                <ui:Label text="Pressure:" display-tooltip-when-elided="true" name="pressure" class="regular" />
+                <ui:Label text="Gas resistance:" display-tooltip-when-elided="true" name="gasResistance" class="regular" />
+                <ui:Label display-tooltip-when-elided="true" />
+                <ui:Label text="Configuration" display-tooltip-when-elided="true" class="title" />
+                <ui:Label text="Temperature oversampling:" display-tooltip-when-elided="true" name="temperatureOversampling" class="regular" />
+                <ui:Label text="Humidity oversampling:" display-tooltip-when-elided="true" name="humidityOversampling" class="regular" />
+                <ui:Label text="Pressure oversampling:" display-tooltip-when-elided="true" name="pressureOversampling" class="regular" />
+                <ui:Label text="Gas heater duration:" display-tooltip-when-elided="true" name="gasHeaterDuration" class="regular" />
+                <ui:Label text="Gas heater temperature:" display-tooltip-when-elided="true" name="gasHeaterTemperature" class="regular" />
+                <ui:Label text="IIR coefficient:" display-tooltip-when-elided="true" name="iirCoefficient" class="regular" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Lowerbar" style="width: 100%; height: 10%;" />
+    </ui:VisualElement>
+</ui:UXML>

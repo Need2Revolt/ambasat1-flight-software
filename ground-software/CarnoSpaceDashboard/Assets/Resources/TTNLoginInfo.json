@@ -1,0 +1,5 @@
+{
+	"mqttServerHostname":"eu.thethings.network",
+	"username":"your_application_id",
+	"password":"your_private_key"
+}
