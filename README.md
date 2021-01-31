@@ -4,7 +4,8 @@ This repository contains a complete, integrated suite of flight software for the
 ## Project Structure
 This project has the following main areas:
 * `satellite-software` - This directory contains the software that gets flashed onto the AmbaSat-1 picosat. This directory is a [PlatformIO](https://platformio.org) project, set up to be used in [Visual Studio Code](https://code.visualstudio.com). The README in this directory gives comprehensive requirements for what the satellite will be able to do with this software, and by extension, how the ground software will support it.
-* `ground-software` - This directory contains several pieces of software that will be used on the ground (not in the satellite). Most notable is the payload decoder for the telemetry sent to [The Things Network](https://www.thethingsnetwork.org).
+* `ground-software` - This directory contains several pieces of software that will be used on the ground (not in the satellite). This includes the payload decoder for the telemetry sent to [The Things Network](https://www.thethingsnetwork.org). and the new graphical dashboard that can be used to display data coming from the satellite
+![Dashboard demo](/ground-software/CarnoSpaceDashboard/DemoScreenshot.PNG)
 * `boards` - These are the PlatformIO board definitions for the AmaSat-1 hardware. 
 
 ## Contributing
